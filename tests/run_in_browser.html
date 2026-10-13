@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HW5 headless runner</title>
+</head>
+<body>
+<!--
+  Runs the unmodified page code (data.js + script.js, TF.js from the same CDN URL as index.html)
+  without clicking: waits for the data, trains with the hyper-parameters given in the query
+  string, and writes the numbers the report needs into the result element as JSON.
+  Serve hw5/ over http and open tests/run_in_browser.html?epochs=20&lr=0.01&reg=0.05&batch=64&l2=batch
+-->
+<p id="tf-status"></p>
+<p id="status"></p>
+<pre id="result">PENDING</pre>
+<script>
+// data.js fetches u.item / u.data relative to the document, so resolve them from hw5/.
+const base = new URL('..', location.href);
+const originalFetch = window.fetch;
+window.fetch = (input, init) => originalFetch(new URL(input, base), init);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+<script src="../data.js"></script>
+<script src="../script.js"></script>
+<script>
+window.addEventListener('load', () => {
+  const q = new URLSearchParams(location.search);
+  const num = (k, d) => (q.has(k) ? Number(q.get(k)) : d);
+  const wait = () => {
+    if (!trainSet.length) { setTimeout(wait, 200); return; }
+    try {
+      const opts = { epochs: num('epochs', 20), lr: num('lr', 0.01), reg: num('reg', 0.05),
+                     batchSize: num('batch', 64), l2Scope: q.get('l2') || 'batch' };
+      const t0 = performance.now();
+      initializeFactors(trainSet, NUM_FACTORS);
+      trainingHistory = trainMF(trainSet, valSet, opts);
+      bestCheckpoint = selectBestCheckpoint(trainingHistory);
+      const trainMs = performance.now() - t0;
+      const out = {
+        backend: tf.getBackend(), opts, trainMs: Math.round(trainMs),
+        split: { train: trainSet.length, val: valSet.length, test: testSet.length, excludedUsers: SPLIT_EXCLUSIONS.length },
+        history: trainingHistory, best: bestCheckpoint,
+        valRMSEAtSelected: computeRMSEFor(valSet), testRMSE: computeRMSEFor(testSet),
+        baselineTestRMSE: computeBaselineRMSE(testSet), baselineValRMSE: computeBaselineRMSE(valSet),
+        tensorsAfter: tf.memory().numTensors
+      };
+      if (q.get('full') === '1') {
+        const t1 = performance.now();
+        const recall = recallAtK(10);
+        out.recall = { overallRecall: recall.overallRecall, users: recall.perUser.length,
+          unseenIds: recall.excluded.unseenIds.length, usersWithoutRelevant: recall.excluded.usersWithoutRelevant.length,
+          perUser: recall.perUser, ms: Math.round(performance.now() - t1) };
+        out.topK = {};
+        const users = q.get('users') === 'all'
+          ? [...new Set(trainSet.map((r) => r.userId))].sort((a, b) => a - b)
+          : (q.get('users') || '').split(',').filter(Boolean).map(Number);
+        for (const u of users) out.topK[u] = recommendTopK(u, 10);
+        // Factors of the selected checkpoint, so Node can recompute any number without TF.js training.
+        out.factors = { user: Array.from(model.userFactors.dataSync()), item: Array.from(model.itemFactors.dataSync()),
+                        rows: [model.userFactors.shape, model.itemFactors.shape], globalMean: model.globalMean };
+      }
+      document.getElementById('result').textContent = JSON.stringify(out);
+    } catch (e) {
+      document.getElementById('result').textContent = 'ERROR ' + e.message;
+    }
+  };
+  // script.js's own window.onload selects the backend, loads and splits the data.
+  wait();
+});
+</script>
+</body>
+</html>

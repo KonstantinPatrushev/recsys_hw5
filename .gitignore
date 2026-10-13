@@ -1,0 +1,4 @@
+report/
+node_modules/
+*.jsonl
+session*.json

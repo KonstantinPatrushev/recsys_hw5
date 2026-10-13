@@ -1,0 +1,443 @@
+{
+ "rmse": {
+  "val": {
+   "recomputed": 1.0088363619821337,
+   "page": 1.0088364478298
+  },
+  "test": {
+   "recomputed": 1.0458726467308554,
+   "page": 1.0458727351716144
+  },
+  "baselineTest": {
+   "recomputed": 1.2289001371836759,
+   "page": 1.2289001371836759
+  },
+  "selectedEpoch": 2,
+  "trainMean": 3.5806026199776437
+ },
+ "recall": {
+  "recomputed": 0.017510985889468863,
+  "page": 0.01751098588946886,
+  "users": 861,
+  "usersWithAtLeastOneHit": 74,
+  "totalHits": 88,
+  "unseenIds": 13,
+  "usersWithoutRelevant": 82,
+  "top10ListsDifferentFromPage": 0,
+  "maxScoreDifference": 6.467015261080178e-7
+ },
+ "handCheck": {
+  "userId": 1,
+  "movieId": 100,
+  "title": "Fargo (1996)",
+  "rating": 5,
+  "globalMean": 3.5806026199776437,
+  "p": [
+   0.5412,
+   0.0832,
+   0.4595,
+   -0.249,
+   0.1696,
+   -0.0085,
+   -0.4404,
+   -0.1431,
+   0.4039,
+   0.1127,
+   0.0068,
+   0.5426,
+   -0.0845,
+   -0.4507,
+   0.5196,
+   -0.0702
+  ],
+  "q": [
+   -0.3348,
+   -0.0476,
+   0.1475,
+   0.0078,
+   0.0893,
+   0.1793,
+   -0.0418,
+   -0.0713,
+   0.0919,
+   0.2296,
+   -0.3296,
+   0.3478,
+   -0.1606,
+   -0.5988,
+   0.256,
+   0.0637
+  ],
+  "dot": 0.5843688326879479,
+  "prediction": 4.164971452665592,
+  "squaredError": 0.6972726748634123
+ },
+ "global": {
+  "users": 943,
+  "distinctMoviesRecommended": 785,
+  "shareInTop100Popular": 0.11866383881230116,
+  "medianTrainRatingsOfRecommended": 16,
+  "recommendedNotInTrain": 0,
+  "mostRecommended": [
+   {
+    "title": "Pather Panchali (1955)",
+    "users": 417,
+    "trainRatings": 7
+   },
+   {
+    "title": "Perfect Candidate, A (1996)",
+    "users": 215,
+    "trainRatings": 3
+   },
+   {
+    "title": "Horseman on the Roof, The (Hussard sur le toit, Le) (1995)",
+    "users": 203,
+    "trainRatings": 8
+   },
+   {
+    "title": "Maya Lin: A Strong Clear Vision (1994)",
+    "users": 197,
+    "trainRatings": 4
+   },
+   {
+    "title": "Aparajito (1956)",
+    "users": 189,
+    "trainRatings": 5
+   },
+   {
+    "title": "Wrong Trousers, The (1993)",
+    "users": 161,
+    "trainRatings": 101
+   },
+   {
+    "title": "12 Angry Men (1957)",
+    "users": 160,
+    "trainRatings": 108
+   },
+   {
+    "title": "Boys, Les (1997)",
+    "users": 159,
+    "trainRatings": 3
+   }
+  ],
+  "shareSharingAUsersTop3Genre": 0.6585365853658537
+ },
+ "users": [
+  {
+   "userId": 655,
+   "trainRatings": 548,
+   "likedInTrain": 96,
+   "topGenres": [
+    "Drama",
+    "Thriller",
+    "Romance"
+   ],
+   "genreCounts": {
+    "Drama": 64,
+    "Thriller": 17,
+    "Romance": 16,
+    "Action": 12,
+    "Crime": 11,
+    "War": 11,
+    "Comedy": 8,
+    "Sci-Fi": 7,
+    "Mystery": 6,
+    "Horror": 5,
+    "Documentary": 4,
+    "Musical": 3,
+    "Film-Noir": 2,
+    "Adventure": 2,
+    "Fantasy": 1
+   },
+   "fiveStarExamples": [
+    "Safe (1995)",
+    "Fugitive, The (1993)",
+    "Killing Fields, The (1984)",
+    "Ma vie en rose (My Life in Pink) (1997)",
+    "Ruby in Paradise (1993)",
+    "Once Were Warriors (1994)",
+    "Angel Baby (1995)",
+    "Bonnie and Clyde (1967)"
+   ],
+   "relevantTest": [
+    "To Kill a Mockingbird (1962)",
+    "Manhattan (1979)",
+    "Pretty Woman (1990)",
+    "Primary Colors (1998)",
+    "Big Night (1996)"
+   ],
+   "top10": [
+    {
+     "title": "Gold Diggers: The Secret of Bear Mountain (1995)",
+     "score": 4.6533,
+     "genres": [
+      "Adventure",
+      "Children's"
+     ],
+     "trainRatings": 7,
+     "popularityRank": 1142,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Top Hat (1935)",
+     "score": 4.3691,
+     "genres": [
+      "Comedy",
+      "Musical",
+      "Romance"
+     ],
+     "trainRatings": 14,
+     "popularityRank": 919,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    },
+    {
+     "title": "Sunset Blvd. (1950)",
+     "score": 4.357,
+     "genres": [
+      "Film-Noir"
+     ],
+     "trainRatings": 53,
+     "popularityRank": 473,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Jingle All the Way (1996)",
+     "score": 4.3466,
+     "genres": [
+      "Adventure",
+      "Children's",
+      "Comedy"
+     ],
+     "trainRatings": 12,
+     "popularityRank": 952,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Kazaam (1996)",
+     "score": 4.2985,
+     "genres": [
+      "Children's",
+      "Comedy",
+      "Fantasy"
+     ],
+     "trainRatings": 6,
+     "popularityRank": 1174,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Pather Panchali (1955)",
+     "score": 4.2301,
+     "genres": [
+      "Drama"
+     ],
+     "trainRatings": 7,
+     "popularityRank": 1140,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    },
+    {
+     "title": "Naked in New York (1994)",
+     "score": 4.221,
+     "genres": [
+      "Comedy",
+      "Romance"
+     ],
+     "trainRatings": 2,
+     "popularityRank": 1452,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    },
+    {
+     "title": "Aparajito (1956)",
+     "score": 4.2134,
+     "genres": [
+      "Drama"
+     ],
+     "trainRatings": 5,
+     "popularityRank": 1235,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    },
+    {
+     "title": "When We Were Kings (1996)",
+     "score": 4.2081,
+     "genres": [
+      "Documentary"
+     ],
+     "trainRatings": 34,
+     "popularityRank": 625,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Dear God (1996)",
+     "score": 4.1838,
+     "genres": [
+      "Comedy"
+     ],
+     "trainRatings": 7,
+     "popularityRank": 1109,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    }
+   ]
+  },
+  {
+   "userId": 895,
+   "trainRatings": 16,
+   "likedInTrain": 10,
+   "topGenres": [
+    "Romance",
+    "Comedy",
+    "Action"
+   ],
+   "genreCounts": {
+    "Romance": 5,
+    "Comedy": 4,
+    "Action": 3,
+    "Drama": 3,
+    "Thriller": 2,
+    "Adventure": 2,
+    "Sci-Fi": 2,
+    "War": 2,
+    "Mystery": 1,
+    "Animation": 1,
+    "Children's": 1,
+    "Crime": 1
+   },
+   "fiveStarExamples": [
+    "Mighty Aphrodite (1995)",
+    "Return of the Jedi (1983)",
+    "Sense and Sensibility (1995)",
+    "Star Wars (1977)"
+   ],
+   "relevantTest": [
+    "Ransom (1996)"
+   ],
+   "top10": [
+    {
+     "title": "Aparajito (1956)",
+     "score": 4.9884,
+     "genres": [
+      "Drama"
+     ],
+     "trainRatings": 5,
+     "popularityRank": 1235,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Empire Strikes Back, The (1980)",
+     "score": 4.914,
+     "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Romance",
+      "Sci-Fi",
+      "War"
+     ],
+     "trainRatings": 330,
+     "popularityRank": 17,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    },
+    {
+     "title": "Godfather, The (1972)",
+     "score": 4.9109,
+     "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+     ],
+     "trainRatings": 367,
+     "popularityRank": 12,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    },
+    {
+     "title": "12 Angry Men (1957)",
+     "score": 4.8611,
+     "genres": [
+      "Drama"
+     ],
+     "trainRatings": 108,
+     "popularityRank": 239,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Secrets & Lies (1996)",
+     "score": 4.8491,
+     "genres": [
+      "Drama"
+     ],
+     "trainRatings": 139,
+     "popularityRank": 166,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Crumb (1994)",
+     "score": 4.8098,
+     "genres": [
+      "Documentary"
+     ],
+     "trainRatings": 68,
+     "popularityRank": 377,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "When We Were Kings (1996)",
+     "score": 4.7821,
+     "genres": [
+      "Documentary"
+     ],
+     "trainRatings": 34,
+     "popularityRank": 625,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Citizen Kane (1941)",
+     "score": 4.7257,
+     "genres": [
+      "Drama"
+     ],
+     "trainRatings": 175,
+     "popularityRank": 109,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Perfect Candidate, A (1996)",
+     "score": 4.7139,
+     "genres": [
+      "Documentary"
+     ],
+     "trainRatings": 3,
+     "popularityRank": 1312,
+     "sharesTopGenre": false,
+     "relevantInTest": false
+    },
+    {
+     "title": "Faithful (1996)",
+     "score": 4.7066,
+     "genres": [
+      "Comedy"
+     ],
+     "trainRatings": 5,
+     "popularityRank": 1199,
+     "sharesTopGenre": true,
+     "relevantInTest": false
+    }
+   ]
+  }
+ ]
+}

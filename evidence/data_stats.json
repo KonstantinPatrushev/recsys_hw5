@@ -1,0 +1,25 @@
+{
+ "users": 943,
+ "movies": 1682,
+ "ratings": 100000,
+ "maxUserId": 943,
+ "uniqueUserMoviePairs": 100000,
+ "density": 0.063047,
+ "sparsity": 0.936953,
+ "split": {
+  "train": 79619,
+  "val": 9596,
+  "test": 10785,
+  "usersSkipped": 0
+ },
+ "usersAbsentFromTrain": 0,
+ "moviesInTrain": 1611,
+ "moviesNeverInTrain": 71,
+ "valRatingsOnMoviesNotInTrain": 35,
+ "testRatingsOnMoviesNotInTrain": 53,
+ "relevantTestRatings": 5155,
+ "relevantTestRatingsNotInTrain": 13,
+ "relevantTestMoviesNotInTrain": 13,
+ "usersWithRelevantTestCandidate": 861,
+ "trainMean": 3.580603
+}

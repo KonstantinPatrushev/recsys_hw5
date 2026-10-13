@@ -1,0 +1,73 @@
+{
+ "byTrainRatings": [
+  {
+   "trainRatings": "1-5",
+   "movies": 427,
+   "medianNorm": 1.278,
+   "meanNorm": 1.233
+  },
+  {
+   "trainRatings": "6-20",
+   "movies": 398,
+   "medianNorm": 1.515,
+   "meanNorm": 1.55
+  },
+  {
+   "trainRatings": "21-100",
+   "movies": 522,
+   "medianNorm": 1.311,
+   "meanNorm": 1.348
+  },
+  {
+   "trainRatings": "101+",
+   "movies": 264,
+   "medianNorm": 1.135,
+   "meanNorm": 1.145
+  }
+ ],
+ "neverInTrainMedianNorm": 0.203,
+ "recommendedExamples": [
+  {
+   "title": "Pather Panchali (1955)",
+   "trainRatings": 7,
+   "trainMean": 4.71,
+   "factorNorm": 1.783
+  },
+  {
+   "title": "Perfect Candidate, A (1996)",
+   "trainRatings": 3,
+   "trainMean": 4.67,
+   "factorNorm": 1.465
+  },
+  {
+   "title": "Maya Lin: A Strong Clear Vision (1994)",
+   "trainRatings": 4,
+   "trainMean": 4.5,
+   "factorNorm": 1.581
+  },
+  {
+   "title": "Aparajito (1956)",
+   "trainRatings": 5,
+   "trainMean": 4.6,
+   "factorNorm": 1.569
+  },
+  {
+   "title": "Kazaam (1996)",
+   "trainRatings": 6,
+   "trainMean": 1.67,
+   "factorNorm": 2.064
+  },
+  {
+   "title": "Gold Diggers: The Secret of Bear Mountain (1995)",
+   "trainRatings": 7,
+   "trainMean": 3.29,
+   "factorNorm": 1.509
+  },
+  {
+   "title": "Star Wars (1977)",
+   "trainRatings": 523,
+   "trainMean": 4.35,
+   "factorNorm": 1.454
+  }
+ ]
+}

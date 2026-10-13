@@ -1,0 +1,153 @@
+{
+ "rmse": {
+  "val": {
+   "recomputed": 1.0088363619821337,
+   "page": 1.0088364478298
+  },
+  "test": {
+   "recomputed": 1.0458726467308554,
+   "page": 1.0458727351716144
+  },
+  "baselineTest": {
+   "recomputed": 1.2289001371836759,
+   "page": 1.2289001371836759
+  },
+  "selectedEpoch": 2,
+  "trainMean": 3.5806026199776437
+ },
+ "recall": {
+  "recomputed": 0.017510985889468863,
+  "page": 0.01751098588946886,
+  "users": 861,
+  "usersWithAtLeastOneHit": 74,
+  "totalHits": 88,
+  "unseenIds": 13,
+  "usersWithoutRelevant": 82,
+  "top10ListsDifferentFromPage": 0,
+  "maxScoreDifference": 6.467015261080178e-7
+ },
+ "handCheck": {
+  "userId": 1,
+  "movieId": 100,
+  "title": "Fargo (1996)",
+  "rating": 5,
+  "globalMean": 3.5806026199776437,
+  "p": [
+   0.5412,
+   0.0832,
+   0.4595,
+   -0.249,
+   0.1696,
+   -0.0085,
+   -0.4404,
+   -0.1431,
+   0.4039,
+   0.1127,
+   0.0068,
+   0.5426,
+   -0.0845,
+   -0.4507,
+   0.5196,
+   -0.0702
+  ],
+  "q": [
+   -0.3348,
+   -0.0476,
+   0.1475,
+   0.0078,
+   0.0893,
+   0.1793,
+   -0.0418,
+   -0.0713,
+   0.0919,
+   0.2296,
+   -0.3296,
+   0.3478,
+   -0.1606,
+   -0.5988,
+   0.256,
+   0.0637
+  ],
+  "dot": 0.5843688326879479,
+  "prediction": 4.164971452665592,
+  "squaredError": 0.6972726748634123
+ },
+ "global": {
+  "users": 943,
+  "distinctMoviesRecommended": 785,
+  "shareInTop100Popular": 0.11866383881230116,
+  "medianTrainRatingsOfRecommended": 16,
+  "recommendedNotInTrain": 0,
+  "mostRecommended": [
+   {
+    "title": "Pather Panchali (1955)",
+    "users": 417,
+    "trainRatings": 7
+   },
+   {
+    "title": "Perfect Candidate, A (1996)",
+    "users": 215,
+    "trainRatings": 3
+   },
+   {
+    "title": "Horseman on the Roof, The (Hussard sur le toit, Le) (1995)",
+    "users": 203,
+    "trainRatings": 8
+   },
+   {
+    "title": "Maya Lin: A Strong Clear Vision (1994)",
+    "users": 197,
+    "trainRatings": 4
+   },
+   {
+    "title": "Aparajito (1956)",
+    "users": 189,
+    "trainRatings": 5
+   },
+   {
+    "title": "Wrong Trousers, The (1993)",
+    "users": 161,
+    "trainRatings": 101
+   },
+   {
+    "title": "12 Angry Men (1957)",
+    "users": 160,
+    "trainRatings": 108
+   },
+   {
+    "title": "Boys, Les (1997)",
+    "users": 159,
+    "trainRatings": 3
+   }
+  ],
+  "shareSharingAUsersTop3Genre": 0.6585365853658537
+ }
+}
+
+USER 655: train 548, liked 96, top genres Drama,Thriller,Romance
+  5-star: Safe (1995) | Fugitive, The (1993) | Killing Fields, The (1984) | Ma vie en rose (My Life in Pink) (1997) | Ruby in Paradise (1993) | Once Were Warriors (1994) | Angel Baby (1995) | Bonnie and Clyde (1967)
+  relevant test: To Kill a Mockingbird (1962) | Manhattan (1979) | Pretty Woman (1990) | Primary Colors (1998) | Big Night (1996)
+  1. Gold Diggers: The Secret of Bear Mountain (1995) 4.6533 [Adventure,Children's] pop#1142 n=7 NEW-GENRE
+  2. Top Hat (1935) 4.3691 [Comedy,Musical,Romance] pop#919 n=14
+  3. Sunset Blvd. (1950) 4.357 [Film-Noir] pop#473 n=53 NEW-GENRE
+  4. Jingle All the Way (1996) 4.3466 [Adventure,Children's,Comedy] pop#952 n=12 NEW-GENRE
+  5. Kazaam (1996) 4.2985 [Children's,Comedy,Fantasy] pop#1174 n=6 NEW-GENRE
+  6. Pather Panchali (1955) 4.2301 [Drama] pop#1140 n=7
+  7. Naked in New York (1994) 4.221 [Comedy,Romance] pop#1452 n=2
+  8. Aparajito (1956) 4.2134 [Drama] pop#1235 n=5
+  9. When We Were Kings (1996) 4.2081 [Documentary] pop#625 n=34 NEW-GENRE
+  10. Dear God (1996) 4.1838 [Comedy] pop#1109 n=7 NEW-GENRE
+
+USER 895: train 16, liked 10, top genres Romance,Comedy,Action
+  5-star: Mighty Aphrodite (1995) | Return of the Jedi (1983) | Sense and Sensibility (1995) | Star Wars (1977)
+  relevant test: Ransom (1996)
+  1. Aparajito (1956) 4.9884 [Drama] pop#1235 n=5 NEW-GENRE
+  2. Empire Strikes Back, The (1980) 4.914 [Action,Adventure,Drama,Romance,Sci-Fi,War] pop#17 n=330
+  3. Godfather, The (1972) 4.9109 [Action,Crime,Drama] pop#12 n=367
+  4. 12 Angry Men (1957) 4.8611 [Drama] pop#239 n=108 NEW-GENRE
+  5. Secrets & Lies (1996) 4.8491 [Drama] pop#166 n=139 NEW-GENRE
+  6. Crumb (1994) 4.8098 [Documentary] pop#377 n=68 NEW-GENRE
+  7. When We Were Kings (1996) 4.7821 [Documentary] pop#625 n=34 NEW-GENRE
+  8. Citizen Kane (1941) 4.7257 [Drama] pop#109 n=175 NEW-GENRE
+  9. Perfect Candidate, A (1996) 4.7139 [Documentary] pop#1312 n=3 NEW-GENRE
+  10. Faithful (1996) 4.7066 [Comedy] pop#1199 n=5

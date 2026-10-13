@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "description": "Node-side checks for the HW5 page (not part of the page itself)",
+  "dependencies": { "@tensorflow/tfjs": "4.22.0" }
+}

@@ -1,0 +1,35 @@
+{
+ "users": 861,
+ "rows": [
+  {
+   "variant": "MF, all training movies (page)",
+   "recallAt10": 0.0175,
+   "distinctMovies": 762,
+   "shareUnder20Ratings": 0.536
+  },
+  {
+   "variant": "MF, movies with >= 5 training ratings",
+   "recallAt10": 0.0193,
+   "distinctMovies": 692,
+   "shareUnder20Ratings": 0.426
+  },
+  {
+   "variant": "MF, movies with >= 20 training ratings",
+   "recallAt10": 0.0259,
+   "distinctMovies": 568,
+   "shareUnder20Ratings": 0
+  },
+  {
+   "variant": "MF, movies with >= 50 training ratings",
+   "recallAt10": 0.0359,
+   "distinctMovies": 410,
+   "shareUnder20Ratings": 0
+  },
+  {
+   "variant": "most popular in training (not MF)",
+   "recallAt10": 0.0845,
+   "distinctMovies": 77,
+   "shareUnder20Ratings": 0
+  }
+ ]
+}

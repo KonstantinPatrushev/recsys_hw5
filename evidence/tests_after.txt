@@ -1,0 +1,14 @@
+TensorFlow.js backend: webgl
+HW5 self-checks — pass 11, fail 0, pending 0 (of 11)
+
+PASS    computeBaselineRMSE: toy split matches the hand-computed value — rmse=1.0000
+PASS    computeBaselineRMSE: empty split returns 0 (no division by zero) — guarded
+PASS    fmt: formats numbers and guards non-finite input — ok
+PASS    movieTitle: resolves ids and falls back for unknown ids — ok
+PASS    predictRating: clamps to [1, 5] and falls back to the global mean — clamped=5, fallback=3
+PASS    initializeFactors: allocates tf.Variable factors and the global mean — user [944,4], item [4,4]
+PASS    trainMF: returns one finite history row per epoch — e1:1.1559 e2:1.1424 e3:1.1217
+PASS    selectBestCheckpoint: smallest valRMSE wins, ties keep the earliest epoch — best epoch 1
+PASS    recommendTopK: excludes train+val items but allows test-rated items — 3, 4, 5
+PASS    recallAtK: relevant movie at rank 1 scores 1.0; at rank 11 scores 0.0 — rank1=1.0000 rank11=0.0000
+PASS    recallAtK: empty test set returns 0 without dividing by zero — guarded
