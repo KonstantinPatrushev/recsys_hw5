@@ -149,6 +149,7 @@
     "Adventure": 2,
     "Fantasy": 1
    },
+   "top100PopularAlreadyRated": 85,
    "fiveStarExamples": [
     "Safe (1995)",
     "Fugitive, The (1993)",
@@ -310,6 +311,7 @@
     "Children's": 1,
     "Crime": 1
    },
+   "top100PopularAlreadyRated": 12,
    "fiveStarExamples": [
     "Mighty Aphrodite (1995)",
     "Return of the Jedi (1983)",

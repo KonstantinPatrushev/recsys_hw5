@@ -125,8 +125,10 @@ out.users = chosen.map(u => {
     const pr = profile(u);
     const fives = train.filter(r => r.userId === u && r.rating === 5).map(r => titleOf.get(r.movieId));
     const rel = relevant.get(u);
+    const top100 = [...popularityRank].filter(([, k]) => k <= 100).map(([id]) => id);
     return {
         userId: u, trainRatings: trainCount.get(u), likedInTrain: pr.liked, topGenres: pr.topGenres, genreCounts: pr.genreCounts,
+        top100PopularAlreadyRated: top100.filter(id => ratedTV.get(u).has(id)).length,
         fiveStarExamples: fives.slice(0, 8), relevantTest: [...rel].map(id => titleOf.get(id)),
         top10: lists.get(u).map(x => ({ title: titleOf.get(x.movieId), score: +x.score.toFixed(4), genres: genresOf.get(x.movieId),
             trainRatings: count.get(x.movieId) || 0, popularityRank: popularityRank.get(x.movieId) || null,
